@@ -1,0 +1,21 @@
+* {
+  font-family: 'Cabin Condensed', Arial, Helvetica, sans-serif;
+  font-size: 18px; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  background-image: linear-gradient(#0065B7, #1E9AB2); }
+
+.container {
+  margin: 0 auto;
+  width: 85vw; }
+
+h1 {
+  margin: 0; }
+
+button {
+  border: none;
+  box-shadow: none; }
