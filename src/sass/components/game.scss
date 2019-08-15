@@ -1,7 +1,7 @@
 .game {
 
     .new-game {
-        background-color: #fff;
+        background-color: $cl-white;
         border-radius: 8px;
         box-shadow: 3px 6px 5px -5px;
         font-size: 18px;
@@ -27,13 +27,17 @@
         justify-content: space-between;
     
         .number {
-            background-color: #fff;
+            background-color: $cl-white;
             border-radius: 5px;
             color: #0065B7;
             font-size: 26px;
             height: 50px;
             margin-bottom: 10px;
             width: 60px;
+
+            &.checked {
+                background-color: #ebe830;
+            }
         }
     }
 

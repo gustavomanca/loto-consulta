@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Cabin+Condensed:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap");
 * {
   font-family: 'Cabin Condensed', Arial, Helvetica, sans-serif;
   font-size: 18px; }
@@ -8,7 +8,8 @@ body {
   height: 100%; }
 
 body {
-  background-image: linear-gradient(#0065B7, #1E9AB2); }
+  background-image: linear-gradient(#0065B7, #1E9AB2);
+  font-family: "Kaushan Script"; }
 
 .container {
   margin: 0 auto;
@@ -48,6 +49,8 @@ button {
     height: 50px;
     margin-bottom: 10px;
     width: 60px; }
+    .game .game-numbers .number.checked {
+      background-color: #ebe830; }
 
 .header {
   display: flex;
@@ -55,4 +58,5 @@ button {
   margin: 40px 0 80px; }
   .header .title {
     color: #fff;
-    font-size: 2.5em; }
+    font-size: 2.5em;
+    font-family: "Kaushan Script"; }
