@@ -7,57 +7,68 @@
         <link rel="stylesheet" type="text/css" href="dist/css/index.css">
     </head>
     <body>
+
         <div class="container">
+
+            <nav class="nav">
+                <button class="menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+
             <header class="header">
+                <img 
+                    src="src/assets/images/trevo2.png"
+                    alt="Imagem trevo de quatro folhas"
+                    class="logo-icon"
+                >
                 <h1 class="title">
                     Loto Consulta
                 </h1>
             </header>
 
-            <div class="games-wrapper">
-
-                <div class="game -hide">
-                    <button class="new-game">
-                        Novo jogo
-                    </button>
-
-                    <div class="game-numbers">
-
-                        <input type="button" class="number" value="01" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="02" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="03" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="04" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="05" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="06" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="07" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="08" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="09" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="10" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="11" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="12" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="13" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="14" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="15" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="16" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="17" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="18" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="19" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="20" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="21" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="22" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="23" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="24" onclick="toggleNumber(this);">
-                        <input type="button" class="number" value="25" onclick="toggleNumber(this);">
-
-                        <button type="button" value="Confirmar" onclick="getNumberOfHits();">
-                            Checar    
-                        </button>
-                      
-                    </div>
-                </div>
-
+            <div class="result-wrapper">
+                <span class="msg" data-attr="resultMsg"></span>
             </div>
+
+            <div class="numbers-wrapper">
+                <button type="button" class="number-btn" value="01" onclick="toggleNumber(this);">01</button>
+                <button type="button" class="number-btn" value="02" onclick="toggleNumber(this);">02</button>
+                <button type="button" class="number-btn" value="03" onclick="toggleNumber(this);">03</button>
+                <button type="button" class="number-btn" value="04" onclick="toggleNumber(this);">04</button>
+                <button type="button" class="number-btn" value="05" onclick="toggleNumber(this);">05</button>
+                <button type="button" class="number-btn" value="06" onclick="toggleNumber(this);">06</button>
+                <button type="button" class="number-btn" value="07" onclick="toggleNumber(this);">07</button>
+                <button type="button" class="number-btn" value="08" onclick="toggleNumber(this);">08</button>
+                <button type="button" class="number-btn" value="09" onclick="toggleNumber(this);">09</button>
+                <button type="button" class="number-btn" value="10" onclick="toggleNumber(this);">10</button>
+                <button type="button" class="number-btn" value="11" onclick="toggleNumber(this);">11</button>
+                <button type="button" class="number-btn" value="12" onclick="toggleNumber(this);">12</button>
+                <button type="button" class="number-btn" value="13" onclick="toggleNumber(this);">13</button>
+                <button type="button" class="number-btn" value="14" onclick="toggleNumber(this);">14</button>
+                <button type="button" class="number-btn" value="15" onclick="toggleNumber(this);">15</button>
+                <button type="button" class="number-btn" value="16" onclick="toggleNumber(this);">16</button>
+                <button type="button" class="number-btn" value="17" onclick="toggleNumber(this);">17</button>
+                <button type="button" class="number-btn" value="18" onclick="toggleNumber(this);">18</button>
+                <button type="button" class="number-btn" value="19" onclick="toggleNumber(this);">19</button>
+                <button type="button" class="number-btn" value="20" onclick="toggleNumber(this);">20</button>
+                <button type="button" class="number-btn" value="21" onclick="toggleNumber(this);">21</button>
+                <button type="button" class="number-btn" value="22" onclick="toggleNumber(this);">22</button>
+                <button type="button" class="number-btn" value="23" onclick="toggleNumber(this);">23</button>
+                <button type="button" class="number-btn" value="24" onclick="toggleNumber(this);">24</button>
+                <button type="button" class="number-btn" value="25" onclick="toggleNumber(this);">25</button>
+            </div>
+            
+            <div class="actions-wrapper">
+                <button type="button" class="check-btn" value="Confirmar" onclick="getNumberOfHits();">
+                    Checar    
+                </button>
+            </div>
+
         </div>
+
         <script src="src/js/app.js"></script>
     </body>
 </html>

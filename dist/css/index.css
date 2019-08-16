@@ -1,62 +1,102 @@
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cabin+Condensed:400,700&display=swap");
 * {
-  font-family: 'Cabin Condensed', Arial, Helvetica, sans-serif;
-  font-size: 18px; }
+  font-family: "Cabin Condensed", Arial, Helvetica, sans-serif; }
 
 html,
 body {
-  height: 100%; }
-
-body {
-  background-image: linear-gradient(#0065B7, #1E9AB2);
-  font-family: "Kaushan Script"; }
-
-.container {
-  margin: 0 auto;
-  width: 85vw; }
-
-h1 {
   margin: 0; }
 
-button {
-  border: none;
-  box-shadow: none; }
+body {
+  background-image: linear-gradient(#0065B7, #1E9AB2); }
 
-.game .new-game {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 3px 6px 5px -5px;
-  font-size: 18px;
-  letter-spacing: 0.7px;
-  padding: 10px;
-  width: 100%; }
-
-.game.-hide .new-game {
-  display: none; }
-
-.game.-hide .game-numbers {
-  display: flex; }
-
-.game .game-numbers {
-  display: none;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  .game .game-numbers .number {
-    background-color: #fff;
-    border-radius: 5px;
-    color: #0065B7;
-    font-size: 26px;
-    height: 50px;
-    margin-bottom: 10px;
-    width: 60px; }
-    .game .game-numbers .number.checked {
-      background-color: #ebe830; }
-
-.header {
-  display: flex;
-  justify-content: center;
-  margin: 40px 0 80px; }
-  .header .title {
-    color: #fff;
-    font-size: 2.5em;
-    font-family: "Kaushan Script"; }
+.container {
+  height: 100vh;
+  padding: 0 1rem; }
+  .container > .nav {
+    display: flex;
+    height: 1.5rem;
+    justify-content: flex-end;
+    margin: 1.5rem 0; }
+    .container > .nav > .menu {
+      align-items: center;
+      background: none;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      height: 2rem;
+      justify-content: space-evenly;
+      padding: 0;
+      width: 2rem; }
+    .container > .nav > .menu > .bar {
+      background-color: #fff;
+      border-radius: 4px;
+      display: block;
+      height: 3px;
+      width: 1.75rem; }
+  .container > .header {
+    align-items: center;
+    display: flex;
+    height: 2.5rem;
+    justify-content: center;
+    margin-bottom: 2.5rem; }
+    .container > .header > .logo-icon {
+      filter: invert(1);
+      height: 100%;
+      margin-right: .75rem;
+      width: auto; }
+    .container > .header > .title {
+      color: #fff;
+      font-family: "Kaushan Script";
+      font-size: 2rem;
+      margin: 0; }
+  .container > .result-wrapper {
+    display: flex;
+    height: 2.5rem;
+    justify-content: center;
+    margin-bottom: 2rem; }
+    .container > .result-wrapper > .msg {
+      color: #fff;
+      font-size: 1.5rem; }
+  .container > .numbers-wrapper {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 3.5rem);
+    margin-bottom: 2rem; }
+    .container > .numbers-wrapper > .number-btn {
+      border-radius: .5rem;
+      border-style: none;
+      box-shadow: 1px 1px 0.75rem rgba(0, 0, 0, 0.3);
+      font-size: 1.75rem;
+      outline-width: thick;
+      outline-color: #003866;
+      position: relative; }
+      .container > .numbers-wrapper > .number-btn.checked::before, .container > .numbers-wrapper > .number-btn.checked::after {
+        content: '';
+        width: 3rem;
+        height: .25rem;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        left: calc(50% - 1.5rem);
+        top: calc(50% - .125rem); }
+      .container > .numbers-wrapper > .number-btn.checked::before {
+        transform: rotate(-45deg); }
+      .container > .numbers-wrapper > .number-btn.checked::after {
+        transform: rotate(45deg); }
+  .container > .actions-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%; }
+    .container > .actions-wrapper > .check-btn {
+      background-color: #81F327;
+      border: none;
+      border-radius: .5rem;
+      font-size: 1.25rem;
+      height: 3rem;
+      letter-spacing: 1.5px;
+      outline: none;
+      text-transform: uppercase;
+      width: 8rem; }
+      .container > .actions-wrapper > .check-btn:focus {
+        box-shadow: 0 0 1px 1px #357900; }

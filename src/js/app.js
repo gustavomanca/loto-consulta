@@ -1,6 +1,5 @@
 let checkedNumbers = [];
 let lastResults = [];
-
 let request = new XMLHttpRequest();
 
 request.open('GET', 
@@ -16,7 +15,6 @@ request.onload = function() {
     dezenas.forEach( e => {
         lastResults.push(e);
     });
-    console.log('last results: ', lastResults);
     
 }
 
@@ -42,16 +40,12 @@ function toggleNumber(e) {
     if ( e.classList.contains('checked') ) {
         checkedNumbers.push(e.value);
     } 
-
-    console.log(checkedNumbers);
     
 };
 
 getNumberOfHits = () => {
 
     hits = checkedNumbers.filter( value => lastResults.includes(value));
-
-    console.log(hits);
     
     console.log(hits.length);
     
