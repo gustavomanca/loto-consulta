@@ -67,20 +67,23 @@
 
     > .numbers-wrapper {
 
-        display: grid;
-        grid-gap: .5rem;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5, 3.5rem);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         margin-bottom: 2rem;
 
         > .number-btn {
+            background-color: $cl-alto;
             border-radius: .5rem;
             border-style: none;
             box-shadow: 1px 1px .75rem rgba(0,0,0,0.3);
             font-size: 1.75rem;
+            height: 4rem;
+            margin-bottom: .5rem;
             outline-width: thick;
             outline-color: $cl-midnight-blue;
             position: relative;
+            width: 19%;
 
             &.checked {
 
