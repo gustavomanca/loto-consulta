@@ -4,7 +4,7 @@ let request = new XMLHttpRequest();
 let resultMsg = document.querySelector('[data-attr="resultMsg"]');
 
 request.open('GET', 
-    'http://apiloterias.com.br/app/resultado?loteria=lotofacil&token=q526EIFPMLiR62c', 
+    'https://apiloterias.com.br/app/resultado?loteria=lotofacil&token=q526EIFPMLiR62c', 
     true
 );
 
