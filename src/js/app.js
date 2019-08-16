@@ -1,6 +1,7 @@
 let checkedNumbers = [];
 let lastResults = [];
 let request = new XMLHttpRequest();
+let resultMsg = document.querySelector('[data-attr="resultMsg"]');
 
 request.open('GET', 
     'http://apiloterias.com.br/app/resultado?loteria=lotofacil&token=q526EIFPMLiR62c', 
@@ -48,7 +49,8 @@ getNumberOfHits = () => {
     hits = checkedNumbers.filter( value => lastResults.includes(value));
     
     console.log(hits.length);
+
+    resultMsg.innerHTML = `${ hits.length } acertos!`;
     
 }
-
 
