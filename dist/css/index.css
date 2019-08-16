@@ -15,7 +15,7 @@ body {
   padding: 0 1rem; }
   .container > .nav {
     display: flex;
-    height: 1.5rem;
+    height: 2rem;
     justify-content: flex-end;
     margin: 1.5rem 0; }
     .container > .nav > .menu {
@@ -49,6 +49,7 @@ body {
       color: #fff;
       font-family: "Kaushan Script";
       font-size: 2rem;
+      letter-spacing: 1px;
       margin: 0; }
   .container > .result-wrapper {
     display: flex;
@@ -64,12 +65,15 @@ body {
     justify-content: space-between;
     margin-bottom: 2rem; }
     .container > .numbers-wrapper > .number-btn {
+      align-items: center;
       background-color: #ddd;
       border-radius: .5rem;
       border-style: none;
       box-shadow: 1px 1px 0.75rem rgba(0, 0, 0, 0.3);
+      display: flex;
       font-size: 1.75rem;
       height: 4rem;
+      justify-content: center;
       margin-bottom: .5rem;
       outline-width: thick;
       outline-color: #003866;
