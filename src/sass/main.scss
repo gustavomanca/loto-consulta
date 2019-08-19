@@ -49,8 +49,20 @@
             color: $cl-white;
             font-family: $font-secondary;
             font-size: 2rem;
-            letter-spacing: 0px;
+            letter-spacing: 0git 
+            px;
             margin: 0;
+        }
+    }
+
+    > .lastresult-wrapper {
+
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        > * {
+            display: block;
         }
     }
 

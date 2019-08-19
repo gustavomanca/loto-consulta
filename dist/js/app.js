@@ -1,6 +1,8 @@
 let checkedNumbers = [];
-let lastResults = [];
+let lastResultNumbers = [];
 let request = new XMLHttpRequest();
+let lastDateWrapper = document.querySelector('[data-attr="lastDate"]');
+let lastNumbersWrapper = document.querySelector('[data-attr="lastNumbers"]');
 let resultMsg = document.querySelector('[data-attr="resultMsg"]');
 
 request.open('GET', 
@@ -9,19 +11,23 @@ request.open('GET',
 );
 
 request.onload = function() {
-    // Begin accessing JSON data here
+
     let data = JSON.parse(this.response);
     let dezenas = data.dezenas;
+    let lastDate = new Date(data.data_concurso);
+    let lastResultDate = lastDate.toLocaleDateString();
 
     dezenas.forEach( e => {
-        lastResults.push(e);
+        lastResultNumbers.push(e);
     });
-    
-}
+
+    lastDateWrapper.innerHTML = lastResultDate;
+    lastNumbersWrapper.innerHTML = dezenas.join(' ');
+};
 
 request.send();
 
-function toggleNumber(e) {
+toggleNumber = e => {
 
     checkedNumbers.forEach(number => {
 
@@ -32,7 +38,6 @@ function toggleNumber(e) {
             if ( index > -1 ) {
                 checkedNumbers.splice( index, 1 );
             }
-
         }
     });
 
@@ -41,16 +46,11 @@ function toggleNumber(e) {
     if ( e.classList.contains('checked') ) {
         checkedNumbers.push(e.value);
     } 
-    
 };
 
 getNumberOfHits = () => {
 
-    hits = checkedNumbers.filter( value => lastResults.includes(value));
-    
-    console.log(hits.length);
-
+    hits = checkedNumbers.filter( value => lastResultNumbers.includes(value) );
     resultMsg.innerHTML = `${ hits.length } acertos!`;
-    
 }
 
