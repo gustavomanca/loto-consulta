@@ -3,66 +3,72 @@
 * {
   font-family: "Cabin Condensed", Arial, Helvetica, sans-serif; }
 
-html,
-body {
-  margin: 0; }
-
 body {
   background-image: linear-gradient(#0065B7, #1E9AB2);
-  color: #fff; }
+  color: #fff;
+  letter-spacing: 1.6px;
+  margin: 0;
+  font-size: 10px; }
 
 .container {
-  height: 100vh;
-  padding: 0 1rem; }
+  padding: 0 1.6rem 1.6rem; }
   .container > .nav {
     display: flex;
-    height: 2rem;
+    height: 2.4rem;
     justify-content: flex-end;
-    margin: 1.5rem 0; }
+    margin: 1.6rem 0;
+    visibility: hidden; }
     .container > .nav > .menu {
       align-items: center;
       background: none;
       border: none;
       display: flex;
       flex-direction: column;
-      height: 2rem;
+      height: 100%;
       justify-content: space-evenly;
-      padding: 0;
-      width: 2rem; }
+      padding: 0; }
     .container > .nav > .menu > .bar {
       background-color: #fff;
-      border-radius: 4px;
+      border-radius: .4rem;
       display: block;
-      height: 3px;
-      width: 1.75rem; }
+      height: .25rem;
+      width: 2rem; }
   .container > .header {
     align-items: center;
     display: flex;
-    height: 2.5rem;
+    height: 2.4rem;
     justify-content: center;
-    margin-bottom: 2.5rem; }
+    margin-bottom: 1.6rem; }
     .container > .header > .logo-icon {
       filter: invert(1);
       height: 100%;
-      margin-right: .75rem;
+      margin-right: .8rem;
       width: auto; }
     .container > .header > .title {
       color: #fff;
       font-family: "Kaushan Script";
-      font-size: 2rem;
-      letter-spacing: 0git  px;
+      font-size: 2.4rem;
+      letter-spacing: 0;
       margin: 0; }
   .container > .lastresult-wrapper {
     align-items: center;
+    color: #1C1D21;
     display: flex;
     flex-direction: column; }
     .container > .lastresult-wrapper > * {
       display: block; }
+    .container > .lastresult-wrapper > .date {
+      font-size: 1.2rem;
+      margin-bottom: 1.6rem; }
+    .container > .lastresult-wrapper > .numbers {
+      color: #E9F7CA;
+      font-size: 1.6rem;
+      text-align: center; }
   .container > .result-wrapper {
     display: flex;
-    height: 2.5rem;
+    height: 2.4rem;
     justify-content: center;
-    margin-bottom: 2rem; }
+    margin: .8rem 0; }
     .container > .result-wrapper > .msg {
       color: #fff;
       font-size: 2rem; }
@@ -70,22 +76,22 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 2rem; }
+    margin-bottom: .8rem; }
     .container > .numbers-wrapper > .number-btn {
       align-items: center;
-      background-color: #ddd;
-      border-radius: .5rem;
+      background-color: #E9F7CA;
+      border-radius: .4rem;
       border-style: none;
-      box-shadow: 1px 1px 0.75rem rgba(0, 0, 0, 0.3);
+      box-shadow: 1px 1px 0.8rem rgba(0, 0, 0, 0.3);
       display: flex;
-      font-size: 1.75rem;
-      height: 4rem;
+      font-size: 1.6rem;
+      height: 3.2rem;
       justify-content: center;
-      margin-bottom: .5rem;
+      margin-bottom: .8rem;
       outline-width: thick;
       outline-color: #003866;
       position: relative;
-      width: 19%; }
+      width: 4rem; }
       .container > .numbers-wrapper > .number-btn.checked::before, .container > .numbers-wrapper > .number-btn.checked::after {
         content: '';
         width: 3rem;

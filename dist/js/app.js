@@ -53,4 +53,3 @@ getNumberOfHits = () => {
     hits = checkedNumbers.filter( value => lastResultNumbers.includes(value) );
     resultMsg.innerHTML = `${ hits.length } acertos!`;
 }
-
