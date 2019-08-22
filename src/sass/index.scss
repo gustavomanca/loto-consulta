@@ -2,4 +2,8 @@
 @import './base/variables.scss';
 @import './base/reset.scss';
 
-@import 'main.scss';
+//Components
+@import './components/nav.scss';
+@import './components/header.scss';
+
+@import 'home.scss';

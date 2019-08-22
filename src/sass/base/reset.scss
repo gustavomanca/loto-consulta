@@ -1,11 +1,12 @@
 * {
-    font-family: $font-primary; 
+    font-family: $font-primary;
+    font-size: 10px;
+    font-weight: normal;
 }
 
 body {
-    background-image: linear-gradient($cl-endeavour, $cl-eastern-blue);
-    color: $cl-white;
+    background-color: $cl-anti-flash-white;
+    color: $cl-rich-black;
     letter-spacing: 1.6px;
     margin: 0;
-    font-size: 10px;
 }
