@@ -1,29 +1,53 @@
 .header {
 
     background-color: $cl-deep-space-sparkle;
-    border-radius: 0 0 .8rem .8rem;
+    border-radius: 0 0 1.6rem 1.6rem;
     padding: 3.2rem 2.4rem;
 
-    > .logo {
+    > .logo-wrapper {
+
         align-items: center;
         display: flex;
         justify-content: center;
+        margin-bottom: 1.6rem;
+    
+        > .icon {
+            height: 3.2rem;
+            margin-right: .8rem;
+            width: 3.2rem;
+        }
+
+        > .title {
+            color: $cl-white;
+            font-family: $font-secondary;
+            font-size: 3.2rem;
+            letter-spacing: 0;
+            margin: 0;
+        }
     }
 
-    > .logo > .icon {
-        filter: invert(1);
-        height: 3.2rem;
-        margin-right: .8rem;
-        width: 3.2rem;
-    }
+    > .lastresult-info {
+    
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    
+        > .label {
+            font-size: 1.2rem;
+            margin-bottom: .4rem;
+        }
 
-    > .logo > .title {
-        color: $cl-white;
-        font-family: $font-secondary;
-        font-size: 3.2rem;
-        letter-spacing: 0;
-        margin: 0;
-        text-shadow: 0 1px 1px $cl-black;
-    }
+        > .date {
+            color: $cl-white;
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-bottom: 1.6rem;
+        }
 
+        > .dozens {
+            color: $cl-white;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
 }

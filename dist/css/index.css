@@ -34,21 +34,99 @@ body {
 
 .header {
   background-color: #395C6B;
-  border-radius: 0 0 .8rem .8rem;
+  border-radius: 0 0 1.6rem 1.6rem;
   padding: 3.2rem 2.4rem; }
-  .header > .logo {
+  .header > .logo-wrapper {
     align-items: center;
     display: flex;
-    justify-content: center; }
-  .header > .logo > .icon {
-    filter: invert(1);
-    height: 3.2rem;
-    margin-right: .8rem;
-    width: 3.2rem; }
-  .header > .logo > .title {
-    color: #fff;
-    font-family: "Kaushan Script";
-    font-size: 3.2rem;
-    letter-spacing: 0;
-    margin: 0;
-    text-shadow: 0 1px 1px #000; }
+    justify-content: center;
+    margin-bottom: 1.6rem; }
+    .header > .logo-wrapper > .icon {
+      height: 3.2rem;
+      margin-right: .8rem;
+      width: 3.2rem; }
+    .header > .logo-wrapper > .title {
+      color: #fff;
+      font-family: "Kaushan Script";
+      font-size: 3.2rem;
+      letter-spacing: 0;
+      margin: 0; }
+  .header > .lastresult-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column; }
+    .header > .lastresult-info > .label {
+      font-size: 1.2rem;
+      margin-bottom: .4rem; }
+    .header > .lastresult-info > .date {
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 1.6rem; }
+    .header > .lastresult-info > .dozens {
+      color: #fff;
+      font-size: 2rem;
+      text-align: center; }
+
+.result-wrapper {
+  align-items: center;
+  display: flex;
+  height: 4.8rem;
+  justify-content: center;
+  margin: 0 2.4rem; }
+  .result-wrapper > .msg {
+    font-size: 2rem;
+    font-weight: bold; }
+
+.newgame-wrapper {
+  margin: 0 2.4rem 2.4rem 2.4rem; }
+  .newgame-wrapper > .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 0 1.6rem 0;
+    padding: 0; }
+  .newgame-wrapper > .list > .item {
+    display: inline-block;
+    height: 5.6rem;
+    margin-bottom: .8rem;
+    position: relative;
+    width: calc( (100% - 3.2rem) / 5); }
+  .newgame-wrapper > .list > .item > .btn-number {
+    background-color: #fff;
+    border-radius: .4rem;
+    border-style: none;
+    box-shadow: 0 0 1px #000;
+    font-size: 2.4rem;
+    height: 100%;
+    outline: none;
+    width: 100%; }
+    .newgame-wrapper > .list > .item > .btn-number.checked::before, .newgame-wrapper > .list > .item > .btn-number.checked::after {
+      background-color: rgba(0, 0, 0, 0.5);
+      content: '';
+      height: .5rem;
+      left: 0;
+      position: absolute;
+      top: calc(50% - .25rem);
+      width: 100%; }
+    .newgame-wrapper > .list > .item > .btn-number.checked::before {
+      transform: rotate(45deg); }
+    .newgame-wrapper > .list > .item > .btn-number.checked::after {
+      transform: rotate(135deg); }
+  .newgame-wrapper > .control-buttons {
+    display: flex;
+    justify-content: space-between; }
+  .newgame-wrapper > .control-buttons > .clear-btn,
+  .newgame-wrapper > .control-buttons > .check-btn {
+    border-radius: .4rem;
+    border-style: none;
+    height: 4.8rem;
+    outline: none;
+    width: 10.4rem; }
+  .newgame-wrapper > .control-buttons > .clear-btn {
+    background-color: #B80000; }
+  .newgame-wrapper > .control-buttons > .check-btn {
+    background-color: #49A400; }
+  .newgame-wrapper > .control-buttons .icon {
+    width: 2.4rem; }

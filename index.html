@@ -17,74 +17,49 @@
         </nav>
 
         <header class="header">
-            <div class="logo">
-                <img 
-                    src="src/assets/images/trevo2.png"
-                    alt="Imagem trevo de quatro folhas"
-                    class="icon"
-                />
+
+            <div class="logo-wrapper">
+                <svg class="icon" width="512" height="512" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.514 14.367L14.9859 14.8629L15.4593 14.3686C15.9503 13.8557 20.2826 9.31438 21.1588 7.79383C21.7282 6.80599 21.9821 5.8144 21.9821 4.57877C21.9819 1.57278 19.8647 0 17.7731 0C16.6221 0 15.666 0.422191 14.9928 1.2093C14.4776 0.608104 13.6118 0 12.2178 0C9.74509 0 8.01807 1.88288 8.01807 4.57877C8.01807 5.80908 8.27344 6.80052 8.84583 7.79383C9.72148 9.31366 14.0261 13.8542 14.514 14.367Z" fill="white"/>
+                    <path d="M15.486 17.633L15.0141 17.1371L14.5407 17.6314C14.0497 18.1443 9.71757 22.6855 8.84124 24.2062C8.27195 25.194 8.01807 26.1858 8.01807 27.4212C8.01807 30.4274 10.1354 32 12.2269 32C13.3776 32 14.3338 31.5777 15.0071 30.7906C15.5221 31.3919 16.3879 32 17.782 32C20.2548 32 21.9818 30.1171 21.9818 27.4212C21.9818 26.1912 21.7264 25.1998 21.1541 24.2062C20.2784 22.6863 15.9739 18.1459 15.486 17.633Z" fill="white"/>
+                    <path d="M28.8661 15.9923C29.4299 15.4429 30 14.5194 30 13.0324C30 10.3949 28.2348 8.55273 25.7075 8.55273C24.554 8.55273 23.6245 8.82513 22.6934 9.43568C21.2686 10.3697 17.0117 14.9611 16.5309 15.4818L16.0661 15.9851L16.5295 16.49C17.0103 17.0138 21.2678 21.6349 22.6933 22.5695C23.6191 23.1767 24.5489 23.4475 25.7075 23.4475C28.5257 23.4475 30 21.1892 30 18.9583C30 17.7304 29.6041 16.7105 28.8661 15.9923Z" fill="white"/>
+                    <path d="M13.4691 16.5184L13.9339 16.015L13.4705 15.5101C12.9898 14.9863 8.73237 10.3652 7.30685 9.43063C6.38102 8.82339 5.45127 8.55258 4.29259 8.55258C1.47448 8.55273 0 10.811 0 13.042C0 14.2696 0.395939 15.2895 1.13399 16.0077C0.570233 16.5571 0 17.4806 0 18.9676C0 21.6051 1.7652 23.4472 4.29259 23.4472C5.44614 23.4472 6.37562 23.1748 7.30672 22.5643C8.73169 21.6303 12.9884 17.0388 13.4691 16.5184Z" fill="white"/>
+                </svg>
                 <h1 class="title">
                     Loto Consulta
                 </h1>
             </div>
+
+            <div class="lastresult-info">
+
+                <span class="label">
+                    Último resultado:
+                </span>
+
+                <span class="date" data-attr="lastDate" />
+                </span>
+
+                <span class="dozens" data-attr="lastNumbers" />
+                </span>
+
+            </div>
+
         </header>
 
-            <!-- <header class="header">
-                <img 
-                    src="src/assets/images/trevo2.png"
-                    alt="Imagem trevo de quatro folhas"
-                    class="logo-icon"
-                />
-                <h1 class="title">
-                    Loto Consulta
-                </h1>
-            </header>
+        <div class="result-wrapper">
+            <span class="msg" data-attr="resultMsg"></span>
+        </div>
 
-            <div class="lastresult-wrapper">
+        <div class="newgame-wrapper" data-attr="newGameWrapper">
+        </div>
 
-                <span class="text">Último resultado: </span>
-                <span class="date" data-attr="lastDate"></span>
-                <span class="numbers" data-attr="lastNumbers"></span>
 
-            </div>
-
-            <div class="result-wrapper">
-                <span class="msg" data-attr="resultMsg"></span>
-            </div>
-
-            <div class="numbers-wrapper">
-                <button type="button" class="number-btn" value="01" onclick="toggleNumber(this);">01</button>
-                <button type="button" class="number-btn" value="02" onclick="toggleNumber(this);">02</button>
-                <button type="button" class="number-btn" value="03" onclick="toggleNumber(this);">03</button>
-                <button type="button" class="number-btn" value="04" onclick="toggleNumber(this);">04</button>
-                <button type="button" class="number-btn" value="05" onclick="toggleNumber(this);">05</button>
-                <button type="button" class="number-btn" value="06" onclick="toggleNumber(this);">06</button>
-                <button type="button" class="number-btn" value="07" onclick="toggleNumber(this);">07</button>
-                <button type="button" class="number-btn" value="08" onclick="toggleNumber(this);">08</button>
-                <button type="button" class="number-btn" value="09" onclick="toggleNumber(this);">09</button>
-                <button type="button" class="number-btn" value="10" onclick="toggleNumber(this);">10</button>
-                <button type="button" class="number-btn" value="11" onclick="toggleNumber(this);">11</button>
-                <button type="button" class="number-btn" value="12" onclick="toggleNumber(this);">12</button>
-                <button type="button" class="number-btn" value="13" onclick="toggleNumber(this);">13</button>
-                <button type="button" class="number-btn" value="14" onclick="toggleNumber(this);">14</button>
-                <button type="button" class="number-btn" value="15" onclick="toggleNumber(this);">15</button>
-                <button type="button" class="number-btn" value="16" onclick="toggleNumber(this);">16</button>
-                <button type="button" class="number-btn" value="17" onclick="toggleNumber(this);">17</button>
-                <button type="button" class="number-btn" value="18" onclick="toggleNumber(this);">18</button>
-                <button type="button" class="number-btn" value="19" onclick="toggleNumber(this);">19</button>
-                <button type="button" class="number-btn" value="20" onclick="toggleNumber(this);">20</button>
-                <button type="button" class="number-btn" value="21" onclick="toggleNumber(this);">21</button>
-                <button type="button" class="number-btn" value="22" onclick="toggleNumber(this);">22</button>
-                <button type="button" class="number-btn" value="23" onclick="toggleNumber(this);">23</button>
-                <button type="button" class="number-btn" value="24" onclick="toggleNumber(this);">24</button>
-                <button type="button" class="number-btn" value="25" onclick="toggleNumber(this);">25</button>
-            </div>
-            
-            <div class="actions-wrapper">
-                <button type="button" class="check-btn" value="Confirmar" onclick="getNumberOfHits();">
-                    Checar    
-                </button>
-            </div> -->
+        
+        <!-- <div class="actions-wrapper">
+            <button type="button" class="check-btn" value="Confirmar" onclick="getNumberOfHits();">
+                Checar    
+            </button>
+        </div> -->
 
         <script src="dist/js/app.js"></script>
     </body>
