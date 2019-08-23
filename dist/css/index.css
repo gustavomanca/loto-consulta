@@ -119,6 +119,9 @@ body {
       transform: rotate(45deg); }
     .newgame-wrapper > .list > .item > .btn-number.checked::after {
       transform: rotate(135deg); }
+    .newgame-wrapper > .list > .item > .btn-number.hit {
+      background-color: rgba(129, 243, 39, 0.5);
+      transition: background-color .5s ease; }
   .newgame-wrapper > .control-buttons {
     display: flex;
     justify-content: space-between; }
@@ -138,6 +141,10 @@ body {
 
 .modal {
   display: none; }
+  .modal > .content {
+    height: 0;
+    margin: 0 0 -100rem 0;
+    opacity: 0; }
   .modal.opened {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -158,8 +165,11 @@ body {
       display: flex;
       flex-direction: column;
       height: 40rem;
+      margin: 0;
+      opacity: 1;
       padding: 4rem 1.6rem 1.6rem 1.6rem;
       position: relative;
+      transition: margin .6s ease;
       width: calc(100vw - 9.6rem); }
     .modal.opened > .content > .close-modal {
       background: none;

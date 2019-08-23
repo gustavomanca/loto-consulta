@@ -107,7 +107,7 @@ getNumberOfHits = () => {
     
     } else {
         errorMsg.innerHTML = '';
-        successMsg.innerHTML = `${ hits.length } acertos!`;
+        // successMsg.innerHTML = `${ hits.length } acertos!`;
 
         modal.classList.add('opened');
 
