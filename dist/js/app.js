@@ -3,6 +3,9 @@ const $ = document.querySelector.bind(document);
 const request = new XMLHttpRequest();
 
 const newGameWrapper = $('[data-attr="newGameWrapper"]');
+const modal = $('[data-attr="modal"]');
+const awardsListInfo = $('[data-attr="awardsListInfo"]');
+
 let checkedNumbers = [];
 let lastResultNumbers = [];
 let lastDateWrapper = $('[data-attr="lastDate"]');
@@ -15,7 +18,7 @@ request.open('GET',
     true
 );
 
-request.onload = function() {
+request.onload = function() {    
 
     let data = JSON.parse(this.response);
     let dezenas = data.dezenas;
@@ -28,9 +31,29 @@ request.onload = function() {
 
     lastDateWrapper.innerHTML = lastResultDate;
     lastNumbersWrapper.innerHTML = dezenas.join(' ');
+
+    listAwards(data.premiacao);
 };
 
 request.send();
+
+listAwards = awards => {
+
+    let markup = 
+    `
+        ${ awards.map( item => `
+            <li class="item title">
+                ${ item.nome }
+            </li>
+            <li class="item">
+                ${ item.quantidade_ganhadores } apostas, R$ ${ item.valor_total.toFixed(2) }
+            </li>
+        `).join('')}
+    `;
+
+    awardsListInfo.innerHTML = markup;
+
+};
 
 toggleNumber = e => {
 
@@ -85,6 +108,10 @@ getNumberOfHits = () => {
     } else {
         errorMsg.innerHTML = '';
         successMsg.innerHTML = `${ hits.length } acertos!`;
+
+        modal.classList.add('opened');
+
+        listAwards();
     }
     
 };
@@ -102,8 +129,16 @@ clearCheckedNumbers = () => {
         if ( item.classList.contains('checked') ) {
             item.classList.remove('checked');
         }
-        
     });
+
+    checkedNumbers = [];
+};
+
+closeModal = () => {
+
+    if ( modal.classList.contains('opened') ) {
+        modal.classList.remove('opened');
+    }
 };
 
 const numbers = Array.from(Array(25), ( x, index ) => { 

@@ -54,13 +54,59 @@
         <div class="newgame-wrapper" data-attr="newGameWrapper">
         </div>
 
+        <div class="modal opened" data-attr="modal">
+            <div class="content">
 
-        
-        <!-- <div class="actions-wrapper">
-            <button type="button" class="check-btn" value="Confirmar" onclick="getNumberOfHits();">
-                Checar    
-            </button>
-        </div> -->
+                <button 
+                    class="close-modal"
+                    data-attr="closeModal"
+                    onclick="closeModal();"
+                ></button>
+
+                <span class="hits-label">Você acertou:</span>
+                <span class="hits-qtd" data-attr="hitsQuantity">
+                    10
+                </span>
+                
+                <div class="awards-info">
+                    <h2 class="title">
+                        Premiação
+                    </h2>
+                    <ul class="list" data-attr="awardsListInfo">
+                        <li class="item title">
+                            15 acertos
+                        </li>
+                        <li class="item">
+                            3 apostas, R$ 625.071,70
+                        </li>
+                        <li class="item title">
+                            14 acertos
+                        </li>
+                        <li class="item">
+                            630 apostas, R$ 1.308,36
+                        </li>
+                        <li class="item title">
+                            13 acertos
+                        </li>
+                        <li class="item">
+                            19798 apostas, R$ 20,00
+                        </li>
+                        <li class="item title">
+                            12 acertos
+                        </li>
+                        <li class="item">
+                            222666 apostas, R$ 8,00
+                        </li>
+                        <li class="item title">
+                            11 acertos
+                        </li>
+                        <li class="item">
+                            1139607 apostas, R$ 4,00
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <script src="dist/js/app.js"></script>
     </body>
