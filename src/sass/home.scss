@@ -43,10 +43,13 @@
     }
 
     > .list > .item > .btn-number {
+        align-items: center;
         background-color: $cl-white;
         border-radius: .4rem;
         border-style: none;
         box-shadow: 0 0 1px $cl-black;
+        display: flex;
+        justify-content: center;
         font-size: 2.4rem;
         height: 100%;
         outline: none;
@@ -106,8 +109,6 @@
 
 .modal {
 
-    display: none;
-
     > .content {
         height: 0;
         margin: 0 0 -100rem 0;
@@ -139,7 +140,7 @@
             opacity: 1;
             padding: 4rem 1.6rem 1.6rem 1.6rem;
             position: relative;
-            transition: margin .6s ease;
+            transition: margin .7s cubic-bezier(0.24, 0.10, 0, 1);
             width: calc(100vw - 9.6rem);
         }
 
