@@ -6,10 +6,18 @@
     margin: 0 2.4rem;
 
     > .msg {
-        font-size: 2rem;
         font-weight: bold;
-    }
+        letter-spacing: 0;
+        
+        &.-success {
+            font-size: 2rem;
+        }
 
+        &.-error {
+            color: $cl-boston-university-red;
+            font-size: 1.6rem;
+        }
+    }
 }
 
 
