@@ -5,6 +5,7 @@ const request = new XMLHttpRequest();
 const newGameWrapper = $('[data-attr="newGameWrapper"]');
 const modal = $('[data-attr="modal"]');
 const awardsListInfo = $('[data-attr="awardsListInfo"]');
+const hitsQuantity = $('[data-attr="hitsQuantity"]');
 
 let checkedNumbers = [];
 let lastResultNumbers = [];
@@ -13,29 +14,29 @@ let lastNumbersWrapper = $('[data-attr="lastNumbers"]');
 let successMsg = $('[data-attr="successMsg"]');
 let errorMsg = $('[data-attr="errorMsg"]');
 
-request.open('GET', 
-    'https://apiloterias.com.br/app/resultado?loteria=lotofacil&token=q526EIFPMLiR62c', 
-    true
-);
+// request.open('GET', 
+//     'https://apiloterias.com.br/app/resultado?loteria=lotofacil&token=ln4AYh0sxj1QX1V', 
+//     true
+// );
 
-request.onload = function() {    
+// request.onload = function() {    
 
-    let data = JSON.parse(this.response);
-    let dezenas = data.dezenas;
-    let lastDate = new Date(data.data_concurso);
-    let lastResultDate = lastDate.toLocaleDateString();
+//     let data = JSON.parse(this.response);
+//     let dezenas = data.dezenas;
+//     let lastDate = new Date(data.data_concurso);
+//     let lastResultDate = lastDate.toLocaleDateString();
 
-    dezenas.forEach( e => {
-        lastResultNumbers.push(e);
-    });
+//     dezenas.forEach( e => {
+//         lastResultNumbers.push(e);
+//     });
 
-    lastDateWrapper.innerHTML = lastResultDate;
-    lastNumbersWrapper.innerHTML = dezenas.join(' ');
+//     lastDateWrapper.innerHTML = lastResultDate;
+//     lastNumbersWrapper.innerHTML = dezenas.join(' ');
 
-    listAwards(data.premiacao);
-};
+//     listAwards(data.premiacao);
+// };
 
-request.send();
+// request.send();
 
 listAwards = awards => {
 
@@ -107,6 +108,7 @@ getNumberOfHits = () => {
     
     } else {
         errorMsg.innerHTML = '';
+        hitsQuantity.innerHTML = hits.length;
         // successMsg.innerHTML = `${ hits.length } acertos!`;
 
         modal.classList.add('opened');
@@ -141,21 +143,40 @@ closeModal = () => {
     }
 };
 
-const numbers = Array.from(Array(25), ( x, index ) => { 
+// const numbers = Array.from(Array(25), ( x, index ) => { 
     
-    if ( index < 9 ) {
-        return `0${ index + 1 }`;
-    } else {
-        return `${index + 1}`;
-    }
-});
+//     if ( index < 9 ) {
+//         return `0${ index + 1 }`;
+//     } else {
+//         return `${index + 1}`;
+//     }
+// });
+
+let numbers = [
+    '01',
+    '02',
+    '03',
+    '04',
+    '05',
+    '06',
+    '07',
+    '08',
+    '09',
+    '10',
+    '11',
+    '12',
+    '13',
+    '14',
+    '15'
+];
+
 
 (function(){
-
+    
     newGameWrapper.innerHTML = 
     `
         <ul class="list">
-            ${ numbers.map( num => `
+            ${ numbers.each( num => `
                 <li class="item">
                     <button 
                         class="btn-number"
@@ -188,3 +209,42 @@ const numbers = Array.from(Array(25), ( x, index ) => {
     `;
 
 })();
+
+// (function(){
+    
+//     newGameWrapper.innerHTML = 
+//     `
+//         <ul class="list">
+//             ${ numbers.map( num => `
+//                 <li class="item">
+//                     <button 
+//                         class="btn-number"
+//                         type="button"
+//                         value="${ num }"
+//                         data-attr="btnGameNumber"
+//                         onclick="toggleNumber(this);"
+//                     >
+//                         ${ num }
+//                     </button>
+//                 </li>
+//             `).join('')}
+//         </ul>
+//         <div class="control-buttons">
+//             <button 
+//                 type="button" 
+//                 class="clear-btn"
+//                 onclick="clearCheckedNumbers();"
+//             >
+//                 <img src="src/assets/images/icon-trash.svg" class="icon" />
+//             </button>
+//             <button 
+//                 type="button" 
+//                 class="check-btn"
+//                 onclick="getNumberOfHits();"
+//             >
+//                 <img src="src/assets/images/icon-check.svg" class="icon" />
+//             </button>
+//         </div>
+//     `;
+
+// })();

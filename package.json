@@ -1,14 +1,18 @@
 {
   "name": "loto-consulta",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Consulta de jogos feitos nas loterias",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "cheerio": "^1.0.0-rc.3",
+    "gulp": "^4.0.2",
+    "request": "^2.88.0",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
